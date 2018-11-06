@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<strategy>
+    <name>PivRev_ru</name>
+    <author>zhuangshaobo</author>
+    <description>PivRev_ru</description>
+    <library>PivRev.dll</library>
+    <subscription>
+        <instrument name="ru1705" resolution="tick">
+            <composer resolution="minute" interval="1"/>
+            <session>
+                <item start="09:00:00" end="10:15:00"/>
+                <item start="10:30:00" end="11:30:00"/>
+                <item start="13:30:00" end="15:00:00"/>
+                <item start="21:00:00" end="23:00:00"/>
+            </session>
+        </instrument>
+    </subscription>
+    <historicaldata>
+        <data name="ru1705" resolution="minute" interval="1" maxbackref="2000"/>
+    </historicaldata>
+    <position>
+        <long/>
+        <short/>
+    </position>
+    <parameters>
+        <algotrader enable="false">
+            <param name="LowerLimit_PriceTicks" value="8"/>
+            <param name="UpperLimit_PriceTicks" value="8"/>
+            <param name="Float_PriceTicks" value="0"/>
+            <param name="TimeToLive_Ms" value="10000"/>
+            <param name="NormalPhase_LowerCancel_PriceTicks" value="2"/>
+            <param name="NormalPhase_UpperCancel_PriceTicks" value="2"/>
+            <param name="NormalPhase_ClosePos_LowerCancel_PriceTicks" value="2"/>
+            <param name="NormalPhase_ClosePos_UpperCancel_PriceTicks" value="2"/>
+            <param name="NormalPhase_CancelTime_Ms" value="2000"/>
+            <param name="NormalPhase_ClosePos_CancelTime_Ms" value="2000"/>
+            <param name="CatchPhase_LowerCancel_PriceTicks" value="2"/>
+            <param name="CatchPhase_UpperCancel_PriceTicks" value="2"/>
+            <param name="CatchPhase_ClosePos_LowerCancel_PriceTicks" value="2"/>
+            <param name="CatchPhase_ClosePos_UpperCancel_PriceTicks" value="2"/>
+            <param name="CatchPhase_CancelTime_Ms" value="2000"/>
+            <param name="CatchPhase_ClosePos_CancelTime_Ms" value="2000"/>
+        </algotrader>
+        <user>
+            <param name="LEStrength" value="150"/>
+            <param name="SEStrength" value="20"/>
+            <param name="shortMA" value="50"/>
+            <param name="longMA" value="340"/>
+        </user>
+    </parameters>
+</strategy>
